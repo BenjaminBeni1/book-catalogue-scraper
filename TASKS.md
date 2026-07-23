@@ -4,7 +4,7 @@
 - [x] 1. Environment setup. Create venv, install requests + beautifulsoup4, generated requirements.txt.
 
 ## Fetching
-- [ ] 2. Fetch page 1 and print the raw HTML. Use requests to get the first page of the catalogue and check the status code is 200.
+- [x] 2. Fetch page 1 and print the raw HTML. Use requests to get the first page of the catalogue and check the status code is 200.
 
 ## Understanding the page
 - [ ] 3. map where the 5 fields live. Open the books to scrape website in your browser, inspect a book and write down the tag/class that holds the title, price, rating, availability and URL.
