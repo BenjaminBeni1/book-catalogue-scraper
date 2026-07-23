@@ -10,7 +10,7 @@
 - [x] 3. map where the 5 fields live. Open the books to scrape website in your browser, inspect a book and write down the tag/class that holds the title, price, rating, availability and URL.
 
 ## Parsing
-- [ ] 4. Extract the five fields for one book and print them with BeautifulSoup using the selectors noted in task 3.
+- [x] 4. Extract the five fields for one book and print them with BeautifulSoup using the selectors noted in task 3.
 
 - [ ] 5. Extract all books on page 1, similar to task 4 but now inside a loop to loop over each book on the page. Should end with a list of around 20 dictionaries.
 
