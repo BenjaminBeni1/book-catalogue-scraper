@@ -1,0 +1,8 @@
+Task 3 notes.
+
+container:     tag = article, class = product_pod
+title:         lives in tag "a" as an attribute, but is also shown as the text shown on the page. Since long names get cut off the end is shown as "...".
+price:         tag = p, class = price_color
+rating:        tag = p, class = star-rating Three. There is no number. It's a string in the second attribute after "star-rating". Whether the star is filled out or not is not a html thing. Its a styles thing, most likely in css.
+availability:  tag = p, class = instock availability
+url:           tag "a" href "catalogue/a-light-in-the-attic_1000/index.html"
