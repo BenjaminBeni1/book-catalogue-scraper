@@ -7,12 +7,12 @@
 - [x] 2. Fetch page 1 and print the raw HTML. Use requests to get the first page of the catalogue and check the status code is 200.
 
 ## Understanding the page
-- [x] 3. map where the 5 fields live. Open the books to scrape website in your browser, inspect a book and write down the tag/class that holds the title, price, rating, availability and URL.
+- [x] 3. map where the 5 fields live. Open the books to scrape website in browser, inspect a book and take note of the tag/class that holds the title, price, rating, availability and URL.
 
 ## Parsing
 - [x] 4. Extract the five fields for one book and print them with BeautifulSoup using the selectors noted in task 3.
 
-- [ ] 5. Extract all books on page 1, similar to task 4 but now inside a loop to loop over each book on the page. Should end with a list of around 20 dictionaries.
+- [x] 5. Extract all books on page 1, similar to task 4 but now inside a loop to loop over each book on the page. Should end with a list of around 20 dictionaries.
 
 - [ ] 6. Clean the data during extraction. Remove symbols like "£" and convert the value into availability float. Rating: convert the word "three" into an int "3".
 
