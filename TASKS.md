@@ -20,7 +20,7 @@
 - [x] 7. Loop over all 50 pages. Figure out how the URL's change. Collect every page's books into one list which should be approximately 1,000.
 
 ## Storage
-- [ ] 8. Using SQLite. Create a database, table and insert everything via code that will make these. View and verify with DB Browser that the count is around 1,000.
+- [x] 8. Using SQLite. Create a database, table and insert everything via code that will make these. View and verify with DB Browser that the count is around 1,000.
 
 - [ ] 9. Write the same list via Python's built-in csv module.
 

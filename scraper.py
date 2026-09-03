@@ -1,5 +1,5 @@
 import requests
-
+import sqlite3
 from bs4 import BeautifulSoup
 
 books = []
@@ -38,6 +38,37 @@ for page_number in range(1, 51):
 
 print(books)
 print(len(books))
+
+
+connection = sqlite3.connect("books.db")
+cursor = connection.cursor()
+
+cursor.execute("DROP TABLE IF EXISTS books")
+
+cursor.execute("""
+    CREATE TABLE IF NOT EXISTS books (
+            title TEXT,
+            price REAL,
+            rating INTEGER,
+            availability TEXT,
+            url TEXT
+        )
+    """)
+
+for book in books:
+    cursor.execute(
+        "INSERT INTO books (title, url, price, rating, availability) VALUES (?, ?, ?, ?, ?)",
+        (
+        book["title"],
+        book["url"],
+        book["price"],
+        book["rating"],
+        book["availability"],
+         )
+    )
+
+connection.commit()
+connection.close()
 
 
 
