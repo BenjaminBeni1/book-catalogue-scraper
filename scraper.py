@@ -5,18 +5,20 @@ from bs4 import BeautifulSoup
 #Task 2
 
 info = requests.get("https://books.toscrape.com")
-
-# print(info.text)
-# print(info.status_code)
+info.encoding = "utf-8"
 
 soup = BeautifulSoup(info.text, "html.parser")
 
-#Task 5
-
-books= []
+books = []
 all_books = soup.find_all("article", class_ = "product_pod")
 
-
+rating_map = {
+    "One" : 1,
+    "Two" : 2,
+    "Three" : 3,
+    "Four" : 4,
+    "Five" : 5,
+    }
 
 for book in all_books:
     h3 = book.find("h3")
@@ -31,10 +33,13 @@ for book in all_books:
     books.append({
         "title" : title_link["title"],
         "url" : title_link["href"],
-        "price" : price.get_text(strip=True),
-        "rating" : rating["class"],
-        "availability" : availability.get_text(strip=True),
+        "price": float(price.get_text(strip = True)[1:]),
+        "rating" : rating_map.get(rating["class"][1]),
+        "availability" : availability.get_text(strip = True),
     })
+
 print(len(books))
+
+print(books)
 
 

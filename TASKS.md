@@ -14,7 +14,7 @@
 
 - [x] 5. Extract all books on page 1, similar to task 4 but now inside a loop to loop over each book on the page. Should end with a list of around 20 dictionaries.
 
-- [ ] 6. Clean the data during extraction. Remove symbols like "£" and convert the value into availability float. Rating: convert the word "three" into an int "3".
+- [x] 6. Clean the data during extraction. Remove symbols like "£" and convert the value into availability float. Rating: convert the word "three" into an int "3".
 
 ## Pagination
 - [ ] 7. Loop over all 50 pages. Figure out how the URL's change. Collect every page's books into one list which should be approximately 1,000.
