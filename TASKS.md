@@ -17,7 +17,7 @@
 - [x] 6. Clean the data during extraction. Remove symbols like "£" and convert the value into availability float. Rating: convert the word "three" into an int "3".
 
 ## Pagination
-- [ ] 7. Loop over all 50 pages. Figure out how the URL's change. Collect every page's books into one list which should be approximately 1,000.
+- [x] 7. Loop over all 50 pages. Figure out how the URL's change. Collect every page's books into one list which should be approximately 1,000.
 
 ## Storage
 - [ ] 8. Using SQLite. Create a database, table and insert everything via code that will make these. View and verify with DB Browser that the count is around 1,000.
