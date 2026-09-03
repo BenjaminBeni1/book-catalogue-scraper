@@ -219,3 +219,6 @@ __marimo__/
 
 # SQLite
 books.db
+
+# CSV 
+books.csv

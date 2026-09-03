@@ -22,7 +22,7 @@
 ## Storage
 - [x] 8. Using SQLite. Create a database, table and insert everything via code that will make these. View and verify with DB Browser that the count is around 1,000.
 
-- [ ] 9. Write the same list via Python's built-in csv module.
+- [x] 9. Write the same list via Python's built-in csv module.
 
 ## Politeness & resilience
 - [ ] 10. Delay between requests. This can be done via time.sleep.

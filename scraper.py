@@ -1,5 +1,6 @@
 import requests
 import sqlite3
+import csv
 from bs4 import BeautifulSoup
 
 books = []
@@ -36,10 +37,6 @@ for page_number in range(1, 51):
             "availability" : availability.get_text(strip = True),
         })
 
-print(books)
-print(len(books))
-
-
 connection = sqlite3.connect("books.db")
 cursor = connection.cursor()
 
@@ -69,6 +66,11 @@ for book in books:
 
 connection.commit()
 connection.close()
+
+with open("books.csv", "w", newline="", encoding="utf-8") as file:
+    writer = csv.DictWriter(file, fieldnames=["title", "url", "price", "rating", "availability"])
+    writer.writeheader()
+    writer.writerows(books)
 
 
 
