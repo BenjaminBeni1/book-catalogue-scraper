@@ -34,7 +34,6 @@ for page_number in range(1, 51):
     
     soup = BeautifulSoup(info.text, "html.parser")
     all_books = soup.find_all("article", class_ = "product_pod")
-    time.sleep(1)
 
     for book in all_books:
         h3 = book.find("h3")
