@@ -1,6 +1,7 @@
 import requests
 import sqlite3
 import csv
+import time 
 from bs4 import BeautifulSoup
 
 books = []
@@ -14,10 +15,12 @@ rating_map = {
     }
 
 for page_number in range(1, 51):
+    print(f"Fetching page {page_number}...")
     info = requests.get(f"https://books.toscrape.com/catalogue/page-{page_number}.html")
     info.encoding = "utf-8"
     soup = BeautifulSoup(info.text, "html.parser")
     all_books = soup.find_all("article", class_ = "product_pod")
+    time.sleep(1)
 
     for book in all_books:
         h3 = book.find("h3")

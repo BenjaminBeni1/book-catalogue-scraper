@@ -25,7 +25,7 @@
 - [x] 9. Write the same list via Python's built-in csv module.
 
 ## Politeness & resilience
-- [ ] 10. Delay between requests. This can be done via time.sleep.
+- [x] 10. Delay between requests. This can be done via time.sleep.
 
 - [ ] 11. Retries + skip-and-log. Wrap the fetch so a failure retries up to 3 times. If it continues to fail log which page broke and continue instead of crashing.
 
