@@ -15,9 +15,23 @@ rating_map = {
     }
 
 for page_number in range(1, 51):
-    print(f"Fetching page {page_number}...")
-    info = requests.get(f"https://books.toscrape.com/catalogue/page-{page_number}.html")
-    info.encoding = "utf-8"
+    success = False
+    for attempt in range(3):
+        try:
+            print(f"Fetching page {page_number}...")
+            info = requests.get(f"https://books.toscrape.com/catalogue/page-{page_number}.html")
+            info.raise_for_status()
+            info.encoding = "utf-8"
+            success = True
+            break
+        except requests.RequestException:
+            print(f"Page {page_number} attempt {attempt + 1} failed")
+            time.sleep(2)
+            continue
+    if not success:
+        print(f"Page {page_number} giving up, skipping")
+        continue   
+    
     soup = BeautifulSoup(info.text, "html.parser")
     all_books = soup.find_all("article", class_ = "product_pod")
     time.sleep(1)

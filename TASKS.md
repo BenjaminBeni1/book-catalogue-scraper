@@ -27,7 +27,7 @@
 ## Politeness & resilience
 - [x] 10. Delay between requests. This can be done via time.sleep.
 
-- [ ] 11. Retries + skip-and-log. Wrap the fetch so a failure retries up to 3 times. If it continues to fail log which page broke and continue instead of crashing.
+- [x] 11. Retries + skip-and-log. Wrap the fetch so a failure retries up to 3 times. If it continues to fail log which page broke and continue instead of crashing.
 
 ## End
 - [ ] 12. Complete the README. Install instructions, run instructions with an example command and sample the output. Tick all 5 original deliverables boxes.
